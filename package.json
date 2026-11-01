@@ -1,0 +1,28 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "Inventory app from the Odin project. Built using express and postgreSQL.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bibu007/inventory-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Bibu007/inventory-app/issues"
+  },
+  "homepage": "https://github.com/Bibu007/inventory-app#readme",
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "express-validator": "^7.3.2",
+    "nodemon": "^3.1.14",
+    "pg": "^8.23.1"
+  }
+}
