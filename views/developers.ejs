@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <%- include ('./partials/head.ejs') %>
+  <body>
+    <%- include ('./partials/header.ejs') %>
+    <main>
+      <div class="title-container">
+        <h2 class="title">DEVELOPERS</h2>
+        <button class="add-game">+ Add developer</button>
+      </div>
+      <table>
+        <tr class="row header">
+          <th class="row-item">Name</th>
+          <th class="row-item">Action</th>
+        </tr>
+          <% if(developers.length > 0){ %>
+        <% developers.forEach(developer =>  { %>
+          <tr class="row">
+          <td class="row-item"><%= developer.name %></td>
+          <td class="'row-item"><button class="delete">Delete</button></td>
+          </tr>
+        <%  }) %>
+        <% } %>
+        
+        </table>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <%- include ('./partials/head.ejs') %>
+  <body>
+    <%- include ('./partials/header.ejs') %>
+    <main>
+      <div class="title-container">
+        <h2 class="title">CATEGORIES</h2>
+        <button class="add-game">+ Add category</button>
+      </div>
+      <table>
+        <tr class="row header">
+          <th class="row-item">Name</th>
+          <th class="row-item">Action</th>
+        </tr>
+          <% if(categories.length > 0){ %>
+        <% categories.forEach(category =>  { %>
+          <tr class="row">
+          <td class="row-item"><%= category.name %></td>
+          <td class="'row-item"><button class="delete">Delete</button></td>
+          </tr>
+        <%  }) %>
+        <% } %>
+        
+        </table>
+    </main>
+  </body>
+</html>

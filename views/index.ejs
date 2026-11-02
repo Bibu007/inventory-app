@@ -4,15 +4,32 @@
   <body>
     <%- include ('./partials/header.ejs') %>
     <main>
-      <div class="table">
-        <div class="row header">
-          <h2>Name</h2>
-          <h2>Cost</h2>
-          <h2>Count</h2>
-          <h2>Category</h2>
-          <h2>Supplier</h2>
-        </div>
+      <div class="title-container">
+        <h2 class="title">GAMES</h2>
+        <button class="add-game">+ Add game</button>
       </div>
+      <table>
+        <tr class="row header">
+          <th class="row-item">Name</th>
+          <th class="row-item">Cost</th>
+          <th class="row-item">Count</th>
+          <th class="row-item">Category</th>
+          <th class="row-item">Developer</th>
+          <th class="row-item">Action</th>
+        </tr>
+          <% if(games.length > 0){ %>
+        <% games.forEach(game =>  { %>
+          <tr class="row">
+          <td class="row-item"><%= game.name %></td>
+          <td class="row-item"><%= game.price %></td>
+          <td class="row-item"><%= game.stock_quantity %></td>
+          <td class="row-item"><%= game.categories %></td>
+          <td class="row-item"><%= game.suppliers %></td>
+          </tr>
+        <%  }) %>
+        <% } %>
+        
+        </table>
     </main>
   </body>
 </html>

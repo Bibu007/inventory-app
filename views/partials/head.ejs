@@ -21,6 +21,7 @@
       display: flex;
       justify-content: space-between;
       margin: 10px 20px;
+      flex-wrap: wrap;
     }
     a {
       color: grey;
@@ -73,6 +74,64 @@
       border-radius: 10px;
       color: white;
       background-color: red;
+    }
+    nav {
+      display: flex;
+      gap: 50px;
+    }
+    .logo {
+      color: orange;
+      min-width: 280px;
+    }
+
+    .row.header {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    table {
+      border: 1px solid black;
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+    }
+    .title-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .title {
+      color: rgb(156, 64, 242);
+      margin: 20px;
+    }
+    .add-game {
+      background-color: inherit;
+      border: none;
+      color: rgb(45, 116, 237);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-right: 20px;
+    }
+    .add-game:active {
+      transform: translateY(2px);
+    }
+    th {
+      background-color: aquamarine;
+      padding: 10px;
+      border: 1px solid black;
+    }
+    td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .delete {
+      background-color: inherit;
+      border: none;
+      color: red;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-right: 20px;
+    }
+    .delete:active {
+      transform: translateY(2px);
     }
   </style>
 </head>
