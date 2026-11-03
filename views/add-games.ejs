@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <%- include ('./partials/head.ejs') %>
+  <body>
+    <%- include ('./partials/header.ejs') %>
+    <form action="/games/add" method="POST">
+      <p class="form-item">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required />
+      </p>
+      <p class="form-item">
+        <label for="platform">Platform: </label>
+        <input type="text" name="platform" id="platform" required />
+      </p>
+      <p class="form-item">
+        <label for="release">Release year: </label>
+        <input type="text" name="release" id="release" required />
+      </p>
+      <p class="form-item">
+        <label for="price">Price: </label>
+        <input type="text" name="price" id="price" required />
+      </p>
+      <p class="form-item">
+        <label for="stock">Stock quantity: </label>
+        <input type="text" name="stock" id="stock" required />
+      </p>
+      <p class="form-item">
+        <label for="category">Category: </label>
+        <select name="category" id="category" multiple>
+            <% if(categories.length > 0){ %>
+        <% categories.forEach(category =>  { %>
+            <option value="<%= category.name  %>"><%= category.name %></option>
+        <%  }) %>
+        <% } %>
+        </select>
+        <span class="note">Press Ctrl/command to select multiple options</span>
+      </p>
+      <p class="form-item">
+        <label for="developer">Developer: </label>
+        <select name="developer" id="developer">
+            <% if(developers.length > 0){ %>
+        <% developers.forEach(developer =>  { %>
+            <option value="<%= developer.name  %>"><%= developer.name %></option>
+        <%  }) %>
+        <% } %>
+        </select>
+      </p>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

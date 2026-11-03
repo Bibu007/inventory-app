@@ -6,7 +6,7 @@
     <main>
       <div class="title-container">
         <h2 class="title">GAMES</h2>
-        <button class="add-game">+ Add game</button>
+        <a href="/games/add" class="add-game">+ Add game</a>
       </div>
       <table>
         <tr class="row header">
@@ -15,7 +15,7 @@
           <th class="row-item">Count</th>
           <th class="row-item">Category</th>
           <th class="row-item">Developer</th>
-          <th class="row-item">Action</th>
+          <th class="row-item"></th>
         </tr>
           <% if(games.length > 0){ %>
         <% games.forEach(game =>  { %>
@@ -25,6 +25,7 @@
           <td class="row-item"><%= game.stock_quantity %></td>
           <td class="row-item"><%= game.categories %></td>
           <td class="row-item"><%= game.suppliers %></td>
+          <td class="row-item"><a href="/games/edit/<%= game.id %>" class="edit" data-doc=<%= game.id %>>Edit</a><a href="/games/delete/<%= game.id %>" class="delete" data-doc=<%= game.id %>>Delete</a></td>
           </tr>
         <%  }) %>
         <% } %>

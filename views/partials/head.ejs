@@ -55,12 +55,14 @@
       font-size: 1.25rem;
     }
     label {
-      min-width: 100px;
+      min-width: 200px;
     }
-    input {
+    input,
+    select {
       min-width: 300px;
       border-radius: 10px;
       padding: 10px;
+      font-size: 1rem;
     }
     .form-item {
       width: 200px;
@@ -74,6 +76,11 @@
       border-radius: 10px;
       color: white;
       background-color: red;
+    }
+    .note {
+      font-size: 0.8rem;
+      margin-left: 10px;
+      min-width: 200px;
     }
     nav {
       display: flex;
@@ -97,6 +104,11 @@
     .title-container {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
     }
     .title {
       color: rgb(156, 64, 242);
@@ -129,8 +141,17 @@
       font-weight: 800;
       font-size: 1rem;
       margin-right: 20px;
+      margin-left: 20px;
     }
-    .delete:active {
+    .edit {
+      color: green;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+    .delete:active,
+    .edit:active {
       transform: translateY(2px);
     }
   </style>
