@@ -6,9 +6,9 @@
     <main>
       <div class="title-container">
         <h2 class="title">CATEGORIES</h2>
-        <button class="add-game">+ Add category</button>
+        <a href="/categories/add" class="add-game">+ Add category</a>
       </div>
-      <table>
+      <table class="table-container">
         <tr class="row header">
           <th class="row-item">Name</th>
           <th class="row-item">Action</th>
@@ -17,12 +17,22 @@
         <% categories.forEach(category =>  { %>
           <tr class="row">
           <td class="row-item"><%= category.name %></td>
-          <td class="'row-item"><button class="delete">Delete</button></td>
+          <td class="'row-item"><button data-doc="<%= category.id %>" class="delete">Delete</button></td>
           </tr>
         <%  }) %>
         <% } %>
         
         </table>
+        <p class="warning">You can only delete a category if no games belong to that category</p>
     </main>
+    <script>
+        const table = document.querySelector('.table-container');
+        //console.log("Hey");
+        table.addEventListener('click', (e) => {
+            const endpoint = `/categories/delete/${e.target.dataset.doc}`;
+            //console.log(`Endpoint: ${endpoint}`)
+            window.location.href = `${endpoint}`;
+        })
+    </script>
   </body>
 </html>

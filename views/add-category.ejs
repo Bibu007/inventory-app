@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <%- include ('./partials/head.ejs') %>
+  <body>
+    <%- include ('./partials/header.ejs') %>
+    <form action="/categories/add" method="POST">
+      <p class="form-item">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required />
+      </p>
+      <button>Add</button>
+      <%- include("partials/errors.ejs") %>
+    </form>
+  </body>
+</html>

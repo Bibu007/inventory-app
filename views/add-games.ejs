@@ -6,30 +6,30 @@
     <form action="/games/add" method="POST">
       <p class="form-item">
         <label for="name">Name: </label>
-        <input type="text" name="name" id="name" required />
+        <input type="text" name="name" id="name" value="<%= formData?.name || '' %>" required />
       </p>
       <p class="form-item">
         <label for="platform">Platform: </label>
-        <input type="text" name="platform" id="platform" required />
+        <input type="text" name="platform" id="platform" value="<%= formData?.platform || '' %>" required />
       </p>
       <p class="form-item">
         <label for="release">Release year: </label>
-        <input type="text" name="release" id="release" required />
+        <input type="text" name="release" id="release" value="<%= formData?.release || '' %>" required />
       </p>
       <p class="form-item">
         <label for="price">Price: </label>
-        <input type="text" name="price" id="price" required />
+        <input type="text" name="price" id="price" value="<%= formData?.price || '' %>" required />
       </p>
       <p class="form-item">
         <label for="stock">Stock quantity: </label>
-        <input type="text" name="stock" id="stock" required />
+        <input type="text" name="stock" id="stock" value="<%= formData?.stock || '' %>" required />
       </p>
       <p class="form-item">
         <label for="category">Category: </label>
-        <select name="category" id="category" multiple>
+        <select name="category" id="category" multiple required>
             <% if(categories.length > 0){ %>
         <% categories.forEach(category =>  { %>
-            <option value="<%= category.name  %>"><%= category.name %></option>
+            <option value="<%= category.name  %>" ><%= category.name %></option>
         <%  }) %>
         <% } %>
         </select>
@@ -37,7 +37,7 @@
       </p>
       <p class="form-item">
         <label for="developer">Developer: </label>
-        <select name="developer" id="developer">
+        <select name="developer" id="developer" required>
             <% if(developers.length > 0){ %>
         <% developers.forEach(developer =>  { %>
             <option value="<%= developer.name  %>"><%= developer.name %></option>
@@ -46,6 +46,7 @@
         </select>
       </p>
       <button>Submit</button>
+      <%- include("partials/errors.ejs") %>
     </form>
   </body>
 </html>
