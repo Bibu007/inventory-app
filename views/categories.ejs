@@ -17,7 +17,7 @@
         <% categories.forEach(category =>  { %>
           <tr class="row">
           <td class="row-item"><%= category.name %></td>
-          <td class="'row-item"><button data-doc="<%= category.id %>" class="delete">Delete</button></td>
+          <td class="'row-item"><button data-doc="<%= category.id %>" class="delete" <%= check(category.id) ? 'disabled' : '' %>>Delete</button></td>
           </tr>
         <%  }) %>
         <% } %>
