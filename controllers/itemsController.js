@@ -4,10 +4,7 @@ exports.itemsListGet = (req, res) => {
   db.getAllGames()
     .then((result) => {
       //console.log(result);
-      res.render("index", {
-        title: "Items",
-        games: result,
-      });
+      res.render("index", { title: "Items", games: result });
     })
     .catch((err) => console.log(err));
 };
@@ -20,7 +17,6 @@ exports.categoriesListGet = (req, res) => {
         title: "Categories",
         categories: result,
         error: null,
-        check: db.checkCategory,
       });
     })
     .catch((err) => console.log(err));
