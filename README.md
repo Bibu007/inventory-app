@@ -1,4 +1,4 @@
-# 🎮 Inventory Management App
+# Inventory Management App
 
 <p align="center">
   <a href="https://inventory-app-udn0.onrender.com/">
